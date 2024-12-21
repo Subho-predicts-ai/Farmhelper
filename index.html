@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="agricultureForm" class="form-card">
+            <h1>Farm Helper</h1>
+            <p class="subtitle">Please provide details about your crop and location</p>
+
+            <div class="form-group">
+                <label for="crop">Select Crop</label>
+                <select id="crop" name="crop" required>
+                    <option value="">Select a crop</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="month">Select Month</label>
+                <select id="month" name="month" required>
+                    <option value="">Select a month</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Preferred Language</label>
+                <select id="language" name="language" required>
+                    <option value="">Select language</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="english">English</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="telugu">Telugu</option>
+                    <option value="marathi">Marathi</option>
+                    <option value="bengali">Bengali</option>
+                    <option value="gujarati">Gujarati</option>
+                </select>
+            </div>
+
+            <div class="location-section">
+                <h2>Location Details</h2>
+                
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" value="India" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select state</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">PIN Code</label>
+                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" maxlength="6" placeholder="Enter 6-digit PIN code" required>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Information</button>
+        </form>
+    </div>
+    <script src="constants.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
